@@ -1,0 +1,7 @@
+{
+  "name": "Ionic-Wikiprofes2.0",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
