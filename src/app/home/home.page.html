@@ -1,20 +1,85 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <a [routerLink]="['/home']"> 
+      <img  src="../../assets/wikiprofes2.0.png" style="width: 60px; height: 60px;" >
+    </a>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/login']">Iniciar Sesión</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content color="dark" [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-card id="principal">
+    <div  id="contenedor">
+      <div id="barra_buqueda">
+        <ion-searchbar animated></ion-searchbar>
+      </div>
+
+      <div id="contenido">
+        <div id="contenido_grid">
+
+          <div id="contenido_busqueda">
+            <div id="ranking">
+              
+            </div>
+  
+            <div id="busqueda">
+              <ion-button color="dark" expand="block">Boton Registrar</ion-button>
+            </div>
+          </div>
+
+          <div id="mostrar">
+
+            <ion-card color="dark" id="mostrar_profesor" *ngFor="let maestro of maestros">
+              <img width="200Px" height="200px" src="https://i.pinimg.com/originals/7e/9a/b2/7e9ab2b0d8b4a110e75cfc4a060e2474.png">
+              <ion-card-header>
+                <ion-card-title>
+                  {{ maestro.nombre }}
+                  {{ maestro.apellidos }}
+                </ion-card-title>
+                <ion-card-subtitle>
+                  <p>Conocimiento: {{ maestro.promedio_conocimiento }} %</p>
+                  <p>Puntualidad: {{ maestro.promedio_puntualidad }} %</p>
+                  <p>Dificultad: {{ maestro.promedio_dificultad }} %</p>
+                </ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+
+          </div>
+
+        </div>
+      </div>
+
+      <div id="footer">
+          <div id="contacto">
+            <header>Contacto:</header><br>
+            <a href = "" > Discord  </a><br>
+            <a href = "" > Noticias </a><br>
+            <a href = "" > Lista de actualizaciones </a>
+          </div>
+
+          <div id="preguntas">
+            <header>Preguntas y dudas frecuentes:</header><br>
+            <a href = "" > ¿Cómo evalúo a un profesor?  </a><br>
+            <a href = "" > ¿Cómo registro a un profesor para evaluarlo? </a><br>
+            <a href = "" > Soy profesor, ¿cómo me registro? </a><br>
+            <a href = "" > Soy estudiante, ¿cómo me registro? </a>
+          </div>
+
+          <div id="caso_de_uso">
+            <header>Por qué usar Wiki profes 2.0:</header><br>
+            <a href = "" > Diversidad y herramientas eficientes  </a><br>
+            <a href = "" > Informes de analistas </a><br>
+            <a href = "" > Responsabilidad del equipo </a>
+          </div>
+      </div>
+    </div>
+  </ion-card>
 </ion-content>

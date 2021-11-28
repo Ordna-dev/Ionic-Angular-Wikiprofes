@@ -1,0 +1,38 @@
+.contenedor{
+    background-image: url("../../assets/edifiudg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.forma{
+    background-color: black;
+    border-radius: 15px;
+    padding: 70px;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+}
+
+h2{
+    text-align: center;
+    color:white;
+}
+
+ion-item{
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+ion-button{
+    margin-bottom: 10px;
+}
+
+header{
+    color: white;
+}

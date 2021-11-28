@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <a [routerLink]="['/home']"> 
+      <img  src="../../assets/wikiprofes2.0.png" style="width: 60px; height: 60px;" >
+    </a>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/login']">Iniciar Sesión</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-card class="contenedor">
+    <ion-card class="forma">
+       <ion-header collapse="condense">
+         <ion-toolbar>
+           <ion-title size="large">Crear cuenta</ion-title>
+         </ion-toolbar>
+       </ion-header> 
+       <p align="center">
+         <img src="../../assets/wikiprofes2.0.png">
+       </p>
+       <h2>Crear cuenta</h2>
+       <ion-item>
+        <ion-label position="floating">Nombre de usuario</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+       <ion-item>
+         <ion-label position="floating">Correo</ion-label>
+         <ion-input type="email"></ion-input>
+       </ion-item>
+       <ion-item>
+         <ion-label position="floating">Contraseña</ion-label>
+         <ion-input type="password"></ion-input>
+       </ion-item>
+       <ion-item>
+        <ion-label position="floating">Confirmar Contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <section>
+        <header>Tipo de cuenta:</header>
+        <ion-button size="small">Alumno</ion-button>
+        <ion-button size="small">Administrador</ion-button>
+        <ion-button size="small">Profesor</ion-button>
+       </section>
+       <ion-button color="dark" expand="block">Registrarse</ion-button>
+       <p align="center">
+        <a [routerLink]="['/login']">¿Ya tienes una cuenta?</a>
+       </p>
+     </ion-card>
+   </ion-card>
+</ion-content>
+
