@@ -43,7 +43,7 @@
         <ion-button size="small">Administrador</ion-button>
         <ion-button size="small">Profesor</ion-button>
        </section>
-       <ion-button color="dark" expand="block">Registrarse</ion-button>
+       <ion-button type="registro" color="dark" expand="block" (click)="onRegistro()">Registrarse</ion-button>
        <p align="center">
         <a [routerLink]="['/login']">¿Ya tienes una cuenta?</a>
        </p>

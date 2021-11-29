@@ -23,6 +23,6 @@ export class HomePage implements OnInit{
     this.maestrosService.maestros.subscribe(maestros => {
       this.maestros = maestros;
     });
-    this.maestrosService.getMaestros();
+    //this.maestrosService.getMaestros();
   }
 }
