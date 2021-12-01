@@ -19,4 +19,10 @@ export class MaestrosService {
     })
   }
 
+  crearMaestro(nombre: string, apellidos: string){
+    return this.http.post("http://127.0.0.1:5000/api/v1/contactos", {
+      nombre, apellidos
+    })
+  }
+
 }

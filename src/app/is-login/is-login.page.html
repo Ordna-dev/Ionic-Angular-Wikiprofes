@@ -1,13 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <a [routerLink]="['/home']"> 
+    <a [routerLink]="['/is-login']"> 
       <img  src="../../assets/wikiprofes2.0.png" style="width: 60px; height: 60px;" >
     </a>
     <ion-buttons slot="end">
-      <ion-button [routerLink]="['/login']">Iniciar Sesión</ion-button>
-    </ion-buttons>
-    <ion-buttons slot="end">
-      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+      <ion-button [routerLink]="['']">Cerrar sesión</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -31,9 +28,10 @@
           <div id="contenido_busqueda">
             <div id="ranking">
               <ion-card id="contenedor_ranking" color="dark">
-                  <h2>Opciones:</h2>
-                <ion-button color="medium" expand="block">Mostrar profesores</ion-button>
-              </ion-card>
+                <h2>Opciones:</h2>
+              <ion-button color="medium" expand="block">Mostrar profesores</ion-button>
+              <ion-button [routerLink]="['']" color="medium" expand="block">Registrar profesor</ion-button>
+            </ion-card>
             </div>
   
             <div id="busqueda">
@@ -54,7 +52,7 @@
 
           <div id="mostrar">
 
-            <ion-card id="mostrar_profesor" >
+            <ion-card id="mostrar_profesor">
 
               <ion-item color="dark">
                 <ion-searchbar animated></ion-searchbar>
@@ -62,31 +60,38 @@
               </ion-item>
 
               <ion-content id="muestra">
-                <ion-item *ngFor="let maestro of maestros">
+                <ion-item>
                   <img width="200Px" height="200px" src="https://i.pinimg.com/originals/7e/9a/b2/7e9ab2b0d8b4a110e75cfc4a060e2474.png">
                     <ion-card-header>
 
                       <ion-card-title>
-                        <p>Nombre: {{ maestro.nombre }}
-                        {{ maestro.apellidos }}    
+                        <p>Nombre: Telma Isabel Morales Ramirez 
                       </ion-card-title>
                       <ion-card-title>
-                        Centro universitario: {{ maestro.centro_universitario }}
+                        Centro universitario: CUCEI
                       </ion-card-title>
                       <ion-card-subtitle>
-                        <p>Conocimiento: {{ maestro.promedio_conocimiento }} %</p>
-                        <p>Puntualidad: {{ maestro.promedio_puntualidad }} %</p>
-                        <p>Dificultad: {{ maestro.promedio_dificultad }} %</p>
+                        <p>Conocimiento: 100 %</p>
+                        <p>Puntualidad: 100 %</p>
+                        <p>Dificultad: 100 %</p>
                       </ion-card-subtitle>
                     </ion-card-header>
-                </ion-item>
 
-                <ion-infinite-scroll threshold="250px" (ionInfinite)="loadData($event)">
-                  <ion-infinite-scroll-content
-                    loadingSpinner="bubbles"
-                    loadingText="Cargando....">
-                  </ion-infinite-scroll-content>
-                </ion-infinite-scroll>
+                </ion-item>
+                
+                <ion-content id="limiteScroll">
+                  <ion-item *ngFor="let usuario of usuarios; let i = index;">
+                    <h3>Comentario de prueba {{i + 1}} </h3>
+                  </ion-item>
+    
+                    <ion-infinite-scroll threshold="40px" (ionInfinite)="loadData($event)">
+                      <ion-infinite-scroll-content
+                        loadingSpinner="bubbles"
+                        loadingText="Cargando....">
+                      </ion-infinite-scroll-content>
+                    </ion-infinite-scroll>
+                  </ion-content>
+
               </ion-content>
               
             </ion-card>
@@ -95,6 +100,7 @@
 
         </div>
       </div>
+
     </div>
   </ion-card>
 </ion-content>

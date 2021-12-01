@@ -17,6 +17,8 @@ export class HomePage implements OnInit{
     }
   ];*/
 
+  usuarios: any[] = Array(15);
+
   constructor(private maestrosService: MaestrosService) {}
 
   ngOnInit() {

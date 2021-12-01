@@ -70,19 +70,41 @@
 }
 
 #ranking{
-  background-color: blue;
+  align-items: center;
+  justify-content: center;
 }
 
-#busqueda{
-  background-color: salmon;
+#contenedor_ranking{
   align-items: center;
+  justify-content: center;
+  height: 450px;
 }
 
 #mostrar{
-  background-color: red;
   border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
 }
 
+#busqueda{
+  height: 400px;
+}
+
+#busqueda_conten{
+  padding: 15px;
+  height: 400px;
+  padding: 10px;
+}
+
+#muestra{
+  height: 800px;
+
+}
+
+#limiteScroll{
+  height: 200px;
+}
 
 #footer{
   width: 100%;
@@ -118,5 +140,9 @@
 }
 
 header{
+  color: white;
+}
+
+h2{
   color: white;
 }

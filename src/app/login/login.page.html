@@ -3,6 +3,11 @@
     <a [routerLink]="['/home']"> 
       <img  src="../../assets/wikiprofes2.0.png" style="width: 60px; height: 60px;" >
     </a>
+
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']">Registrarse</ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
@@ -32,7 +37,7 @@
         <ion-button size="small">Administrador</ion-button>
         <ion-button size="small">Profesor</ion-button>
       </section>
-      <ion-button expand="block">Entrar</ion-button>
+      <ion-button [routerLink]="['/is-login']"  expand="block">Entrar</ion-button>
       <ion-button color="dark" expand="block">¿Olvidades tu contraseña?</ion-button>
       <p align="center">
        <a [routerLink]="['/registro']">¿No tienes una cuenta?</a>

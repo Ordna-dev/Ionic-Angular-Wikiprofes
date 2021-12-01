@@ -1,0 +1,145 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  #principal{
+    background-image: url("../../assets/edifiudg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+  
+  #contenedor{
+    width: 100%;
+    height: 100%;
+  }
+  
+  #barra_buqueda{
+    margin: 1em auto;
+    height: 5%;
+    width: 80%;
+  }
+  
+  #contenido{
+    margin: auto;
+    height: 1000px;
+  }
+  
+  #contenido_grid{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 20% auto;
+    column-gap: 1em;
+  }
+  
+  #contenido_busqueda{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 49% 49%;
+    row-gap: 1em;
+  }
+  
+  #ranking{
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #contenedor_ranking{
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    height: 450px;
+  }
+  
+  #busqueda{
+    height: 400px;
+  }
+
+  #busqueda_conten{
+    padding: 15px;
+    height: 400px;
+    padding: 10px;
+  }
+  
+  #mostrar{
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  #muestra{
+    height: 800px;
+  
+  }
+  
+  #limiteScroll{
+    height: 650px;
+  }
+  
+  #footer{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    column-gap: 1em;
+  }
+  
+  #contacto{
+    text-align: center;
+    background-color: black;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  
+  #preguntas{
+    text-align: center;
+    text-align: center;
+    background-color: black;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  
+  #caso_de_uso{
+    text-align: center;
+    text-align: center;
+    background-color: black;
+    border-radius: 25px;
+    padding: 10px;
+  }
+  
+  header{
+    color: white;
+  }
